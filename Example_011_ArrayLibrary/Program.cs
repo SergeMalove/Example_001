@@ -1,33 +1,23 @@
 ﻿void FillArray(int[] array) {
-    int length = array.Length;
-    int index = 0;
-    while (index < length)
-    {
-        array[index] = new Random().Next(1, 10);
-        index++;
+    for (int i = 0; i < array.Length; i++) {
+        array[i] = new Random().Next(1, 10);
     }
 }
 
 void PrintArray(int[] array) {
-    int length = array.Length;
-    int index = 0;
-    while (index < length)
-    {
-        Console.WriteLine(array[index]);
-        index++;
+    for (int i = 0; i < array.Length; i++) {
+        Console.WriteLine(array[i]);
     }
 }
 
 int IndexOf(int[] array, int find) {
-    int length = array.Length;
-    int index = 0;
     int result = -1;
-
-    while (index < length) {
-        if (array[index] == find) {
-            result = index;
+    
+    for (int i = 0; i < array.Length; i++) {
+        if (array[i] == find) {
+            result = i;
+            break;
         }
-        index++;
     }
     return result;
 }
